@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT void JNICALL Java_Jtest_showhomo
   (JNIEnv *, jobject, jstring, jstring);
 
+/*
+ * Class:     Jtest
+ * Method:    test1
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_Jtest_test1
+  (JNIEnv *, jobject, jstring);
+
 #ifdef __cplusplus
 }
 #endif

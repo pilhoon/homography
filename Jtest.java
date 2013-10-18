@@ -5,6 +5,7 @@ public class Jtest
     }
 
     public native void showhomo(String a, String b);
+    public native void test1(String a);
 
     public static void sopl(String a) {
         System.out.println(a);
@@ -18,6 +19,7 @@ public class Jtest
     public static void main(String[] args)
     {
         sopl(args.length);
+        new Jtest().test1("hi it's me");
         
         if(args.length < 2)
         {

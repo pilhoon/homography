@@ -11,7 +11,13 @@ using namespace cv;
 
 void readme();
 
-JNIEXPORT void JNICALL Java_Jtest_showhomo (JNIEnv * env, jobject jo, jstring ff, jstring sf)
+extern "C" JNIEXPORT void JNICALL Java_Jtest_test1(JNIEnv * env, jobject a, jstring b) {
+    const char* st = env->GetStringUTFChars(b,NULL);
+    printf("%s\n", st);
+    env->ReleaseStringUTFChars(b, st);
+}
+
+extern "C" JNIEXPORT void JNICALL Java_Jtest_showhomo (JNIEnv * env, jobject jo, jstring ff, jstring sf)
 {
     printf("jni called successfully\n");
     const char* firstF = env->GetStringUTFChars(ff, NULL);
